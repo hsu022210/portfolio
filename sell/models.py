@@ -6,6 +6,7 @@ from django.db import models
 class Item(models.Model):
     title = models.CharField(max_length=50)
     price = models.PositiveSmallIntegerField(default=0)
+    # image = models.ImageField()
     description = models.TextField()
     category = models.CharField(max_length=50)
     created = models.DateTimeField('date modified', auto_now=True)

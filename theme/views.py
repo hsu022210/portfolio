@@ -4,5 +4,6 @@ from django.shortcuts import render
 
 
 def index(request):
+    # all_items = Item.objects.all()
     context = {'all_items': 'all_items', }
-    return render(request, 'sell/sell.html', context)
+    return render(request, 'theme/index.html', context)

@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+import theme.views
 import sell.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', theme.views.index, name='home'),
     url(r'^sell/', sell.views.index, name='sell'),
 ]
