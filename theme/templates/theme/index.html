@@ -11,6 +11,7 @@
 		<title>Alec Hsu</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
 		<link rel="stylesheet" href="{% static "theme/css/main.css" %}" />
@@ -48,7 +49,8 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<div class="logo"><span class="icon fa-diamond"></span></div>
+							<!-- <div class="logo"><span class="icon fa-diamond"></span></div> -->
+                            <img src="https://graph.facebook.com/587825329/picture?type=normal" class="img-circle">
 							<h2>I am Alec Hsu</h2>
 							<p>self taught web developer</p>
 						</div>
@@ -63,8 +65,11 @@
 									<!-- <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a> -->
 									<a href="#" class="image"><img src="{% static "theme/images/pic01.jpg" %}" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Magna arcu feugiat</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
+										<h2 class="major">Education</h2>
+                                        <p>Bachelor of Mechanical Engineering<br/>National Taipei University of Technology - Graduating in 2016</p>
+                                        <hr />
+                                        <p>Master of Computer Science<br/>University of San Francisco - Graduating in 2018</p>
+                                        <!-- <p class="special">&nbsp</p> -->
 										<a href="#" class="special">Learn more</a>
 									</div>
 								</div>
@@ -76,8 +81,59 @@
 									<!-- <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a> -->
 									<a href="#" class="image"><img src="{% static "theme/images/pic02.jpg" %}" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Tempus adipiscing</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
+										<h2 class="major">Skills</h2>
+                                        <div class="col-md-6">
+                        					<div class="progress">
+                        						<div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" style="width: 70%;">
+                        							Python
+                        						</div>
+                        					</div>
+
+                        					<div class="progress">
+                        						<div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" style="width: 70%;">
+                        							Django
+                        						</div>
+                        					</div>
+
+                        					<div class="progress">
+                        						<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 70%;">
+                        							Bootstrap
+                        						</div>
+                        					</div>
+
+                        					<div class="progress">
+                        						<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 60%;">
+                        							jQuery
+                        						</div>
+                        					</div>
+                        				</div>
+
+                        				<div class="col-md-6">
+                        					<div class="progress">
+                        						<div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width: 70%;">
+                        							HTML
+                        						</div>
+                        					</div>
+
+                        					<div class="progress">
+                        						<div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width: 70%;">
+                        							CSS
+                        						</div>
+                        					</div>
+
+                        					<div class="progress">
+                        						<div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 50%;">
+                        							AngularJS
+                        						</div>
+                        					</div>
+
+                        					<div class="progress">
+                        						<div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 30%;">
+                        							Node.js
+                        						</div>
+                        					</div>
+                        				</div>
+                                        <!-- <p class="special">&nbsp</p> -->
 										<a href="#" class="special">Learn more</a>
 									</div>
 								</div>
@@ -89,9 +145,43 @@
 									<!-- <a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a> -->
 									<a href="#" class="image"><img src="{% static "theme/images/pic03.jpg" %}" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Nullam dignissim</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
+										<h2 class="major">Experience</h2>
+                                        <div class="text-left">
+                                            <p>
+                                                2013
+                                                <br />
+                                                <span class="pull-right">
+                                                    AIESEC - IGIP Team Member
+                                                </span>
+                                                <br />
+                                                2014
+                                                <br />
+                                                <span class="pull-right">
+                                                    AIESEC - Market Expansion Team Manager
+                                                </span>
+                                                <br />
+                                                <span class="pull-right">
+                                                    JihLin Tech - Mechanical Engineering Intern
+                                                </span>
+                                                <br />
+                                                2015
+                                                <br />
+                                                <span class="pull-right">
+                                                    Hackathon Taiwan - Front End Developer
+                                                </span>
+                                                <br />
+                                                <span class="pull-right">
+                                                    OIA of NTUT - Exchange Student Buddy
+                                                </span>
+                                                <br />
+                                                2016
+                                                <br />
+                                                <span class="pull-right">
+                                                    Gliacloud Tech - Web Developer Intern
+                                                </span>
+                                            </p>
+                                        </div>
+										<!-- <a href="#" class="special">Learn more</a> -->
 									</div>
 								</div>
 							</section>
@@ -193,6 +283,8 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<!-- <script src="assets/js/main.js"></script> -->
             <script src="{% static "theme/js/main.js" %}"></script>
+            <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	</body>
 </html>
