@@ -62,8 +62,9 @@
 						<!-- One -->
 							<section id="one" class="wrapper spotlight style1">
 								<div class="inner">
-									<!-- <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a> -->
-									<a href="#" class="image"><img src="{% static "theme/images/pic01.jpg" %}" alt="" /></a>
+                                    <div class="image">
+                                        <img src="{% static "theme/images/pic01.jpg" %}" alt="" />
+                                    </div>
 									<div class="content">
 										<h2 class="major">Education</h2>
                                         <p>Bachelor of Mechanical Engineering<br/>National Taipei University of Technology - Graduating in 2016</p>
@@ -78,8 +79,9 @@
 						<!-- Two -->
 							<section id="two" class="wrapper alt spotlight style2">
 								<div class="inner">
-									<!-- <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a> -->
-									<a href="#" class="image"><img src="{% static "theme/images/pic02.jpg" %}" alt="" /></a>
+                                    <div class="image">
+                                        <img src="{% static "theme/images/pic02.jpg" %}" alt="" />
+                                    </div>
 									<div class="content">
 										<h2 class="major">Skills</h2>
                                         <div class="col-md-6">
@@ -142,20 +144,22 @@
 						<!-- Three -->
 							<section id="three" class="wrapper spotlight style3">
 								<div class="inner">
-									<!-- <a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a> -->
-									<a href="#" class="image"><img src="{% static "theme/images/pic03.jpg" %}" alt="" /></a>
+                                    <div class="image">
+                                        <img src="{% static "theme/images/pic03.jpg" %}" alt="" />
+                                    </div>
 									<div class="content">
 										<h2 class="major">Experience</h2>
                                         <div class="text-left">
                                             <p>
                                                 2013
-                                                <br />
+                                                <!-- <br /> -->
                                                 <span class="pull-right">
                                                     AIESEC - IGIP Team Member
                                                 </span>
                                                 <br />
-                                                2014
                                                 <br />
+                                                2014
+                                                <!-- <br /> -->
                                                 <span class="pull-right">
                                                     AIESEC - Market Expansion Team Manager
                                                 </span>
@@ -164,8 +168,9 @@
                                                     JihLin Tech - Mechanical Engineering Intern
                                                 </span>
                                                 <br />
-                                                2015
                                                 <br />
+                                                2015
+                                                <!-- <br /> -->
                                                 <span class="pull-right">
                                                     Hackathon Taiwan - Front End Developer
                                                 </span>
@@ -174,8 +179,9 @@
                                                     OIA of NTUT - Exchange Student Buddy
                                                 </span>
                                                 <br />
-                                                2016
                                                 <br />
+                                                2016
+                                                <!-- <br /> -->
                                                 <span class="pull-right">
                                                     Gliacloud Tech - Web Developer Intern
                                                 </span>
@@ -189,37 +195,23 @@
 						<!-- Four -->
 							<section id="four" class="wrapper alt style1">
 								<div class="inner">
-									<h2 class="major">Vitae phasellus</h2>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+									<h2 class="major">Sale</h2>
+									<p>Things I would like to sell.</p>
 									<section class="features">
-										<article>
-											<!-- <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a> -->
+                                        {% for item in all_items %}
+                                        <article>
+											<a href="#" class="image"><img src="{{ MEDIA_URL }}{{ item.image }}" alt="" /></a>
+											<h3 class="major">{{ item.title }}</h3>
+											<p>{{ item.description }}</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+                                        {% endfor %}
+										<!-- <article>
 											<a href="#" class="image"><img src="{% static "theme/images/pic04.jpg" %}" alt="" /></a>
 											<h3 class="major">Sed feugiat lorem</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
 											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<!-- <a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a> -->
-											<a href="#" class="image"><img src="{% static "theme/images/pic05.jpg" %}" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<!-- <a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a> -->
-											<a href="#" class="image"><img src="{% static "theme/images/pic06.jpg" %}" alt="" /></a>
-											<h3 class="major">Ante fermentum</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<!-- <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a> -->
-											<a href="#" class="image"><img src="{% static "theme/images/pic07.jpg" %}" alt="" /></a>
-											<h3 class="major">Fusce consequat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
+										</article> -->
 									</section>
 									<ul class="actions">
 										<li><a href="#" class="button">Browse All</a></li>

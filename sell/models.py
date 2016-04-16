@@ -6,10 +6,9 @@ from django.db import models
 class Item(models.Model):
     title = models.CharField(max_length=50)
     price = models.PositiveSmallIntegerField(default=0)
-    # image = models.ImageField()
+    image = models.ImageField(upload_to='uploaded_image/')
     description = models.TextField()
-    category = models.CharField(max_length=50)
-    created = models.DateTimeField('date modified', auto_now=True)
+    posted = models.DateTimeField('date posted', auto_now=True)
 
     def __str__(self):
         return self.title
