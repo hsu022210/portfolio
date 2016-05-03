@@ -25,7 +25,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="{% url 'home' %}">Alec Hsu</a></h1>
+						<h1><a href="https://github.com/hsu022210">Alec Hsu</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -70,8 +70,7 @@
                                         <p>Bachelor of Mechanical Engineering<br/>National Taipei University of Technology - Graduating in 2016</p>
                                         <hr />
                                         <p>Master of Computer Science<br/>University of San Francisco - Graduating in 2018</p>
-                                        <!-- <p class="special">&nbsp</p> -->
-										<a href="#" class="special">Learn more</a>
+										<a href="#one" class="special"></a>
 									</div>
 								</div>
 							</section>
@@ -135,8 +134,7 @@
                         						</div>
                         					</div>
                         				</div>
-                                        <!-- <p class="special">&nbsp</p> -->
-										<a href="#" class="special">Learn more</a>
+										<a href="#two" class="special"></a>
 									</div>
 								</div>
 							</section>
@@ -152,14 +150,13 @@
                                         <div class="text-left">
                                             <p>
                                                 2013
-                                                <!-- <br /> -->
                                                 <span class="pull-right">
                                                     AIESEC - IGIP Team Member
                                                 </span>
                                                 <br />
                                                 <br />
+
                                                 2014
-                                                <!-- <br /> -->
                                                 <span class="pull-right">
                                                     AIESEC - Market Expansion Team Manager
                                                 </span>
@@ -169,8 +166,8 @@
                                                 </span>
                                                 <br />
                                                 <br />
+
                                                 2015
-                                                <!-- <br /> -->
                                                 <span class="pull-right">
                                                     Hackathon Taiwan - Front End Developer
                                                 </span>
@@ -180,8 +177,8 @@
                                                 </span>
                                                 <br />
                                                 <br />
+                                                
                                                 2016
-                                                <!-- <br /> -->
                                                 <span class="pull-right">
                                                     Gliacloud Tech - Web Developer Intern
                                                 </span>
@@ -198,12 +195,12 @@
 									<h2 class="major">Sale</h2>
 									<p>Things I would like to sell.</p>
 									<section class="features">
-                                        {% for item in all_items %}
+                                        {% for item in items %}
                                         <article>
 											<a href="#" class="image"><img src="{{ MEDIA_URL }}{{ item.image }}" alt="" /></a>
 											<h3 class="major">{{ item.title }}</h3>
 											<p>{{ item.description }}</p>
-											<a href="#" class="special">Learn more</a>
+											<p>${{ item.price }}</p>
 										</article>
                                         {% endfor %}
 										<!-- <article>
@@ -214,7 +211,7 @@
 										</article> -->
 									</section>
 									<ul class="actions">
-										<li><a href="#" class="button">Browse All</a></li>
+										<li><a href="{% url 'sell' %}" class="button">More</a></li>
 									</ul>
 								</div>
 							</section>
