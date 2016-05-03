@@ -23,7 +23,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="{% url 'home' %}">Solid State</a></h1>
+						<h1><a href="{% url 'home' %}">Home</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -48,14 +48,43 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Elements</h2>
-								<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
+								<h2>Sale</h2>
+								<p>Everything on sale.</p>
 							</div>
 						</header>
 
 						<!-- Content -->
 							<div class="wrapper">
 								<div class="inner">
+
+                                    <section>
+										<h3 class="major">Image</h3>
+										<div class="box alt">
+											<div class="row uniform">
+                                                {% for item in items %}
+                                                    {% if forloop.counter|divisibleby:'3' %}
+                                                    <div class="4u$ 12u$(medium)">
+                                                        <span class="image fit"><img src="{{ MEDIA_URL }}{{ item.image }}" alt="" /></span>
+                                                        <ul class="alt">
+        													<li>{{ item.title }}</li>
+                                                            <li>${{ item.price }}</li>
+        													<li>{{ item.description }}</li>
+        												</ul>
+                                                    </div>
+                                                    {% else %}
+                                                    <div class="4u 12u$(medium)">
+                                                        <span class="image fit"><img src="{{ MEDIA_URL }}{{ item.image }}" alt="" /></span>
+                                                        <ul class="alt">
+                                                            <li>{{ item.title }}</li>
+                                                            <li>${{ item.price }}</li>
+        													<li>{{ item.description }}</li>
+        												</ul>
+                                                    </div>
+                                                    {% endif %}
+                                                {% endfor %}
+											</div>
+										</div>
+									</section>
 
 									<section>
 										<h3 class="major">Text</h3>

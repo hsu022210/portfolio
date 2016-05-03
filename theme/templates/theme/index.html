@@ -25,7 +25,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="{% url 'home' %}">Alec Hsu</a></h1>
+						<h1><a href="https://github.com/hsu022210">Alec Hsu</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -198,12 +198,12 @@
 									<h2 class="major">Sale</h2>
 									<p>Things I would like to sell.</p>
 									<section class="features">
-                                        {% for item in all_items %}
+                                        {% for item in items %}
                                         <article>
 											<a href="#" class="image"><img src="{{ MEDIA_URL }}{{ item.image }}" alt="" /></a>
 											<h3 class="major">{{ item.title }}</h3>
 											<p>{{ item.description }}</p>
-											<a href="#" class="special">Learn more</a>
+											<p>${{ item.price }}</p>
 										</article>
                                         {% endfor %}
 										<!-- <article>
@@ -214,7 +214,7 @@
 										</article> -->
 									</section>
 									<ul class="actions">
-										<li><a href="#" class="button">Browse All</a></li>
+										<li><a href="{% url 'sell' %}" class="button">More</a></li>
 									</ul>
 								</div>
 							</section>
