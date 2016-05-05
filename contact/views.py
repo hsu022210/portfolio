@@ -7,7 +7,7 @@ from django.views.generic.edit import FormView
 
 
 class ContactView(FormView):
-    template_name = 'theme/index.html'
+    template_name = 'contact/contact.html'
     success_url = reverse_lazy('contact')
     form_class = ContactForm
 
@@ -16,4 +16,7 @@ class ContactView(FormView):
         form.save()
         return super(ContactView, self).form_valid(form)
 
-contact = ContactView.as_view()
+index = ContactView.as_view()
+
+# def index(request):
+#     return render(request, 'contact/contact.html', {})

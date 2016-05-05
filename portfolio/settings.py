@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sell',
     'theme',
+    'contact',
 ]
 
 MIDDLEWARE_CLASSES = [
