@@ -1,292 +1,192 @@
+{% extends 'theme/base.html' %}
+
 {% load staticfiles %}
 
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Alec Hsu</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
-		<link rel="stylesheet" href="{% static "theme/css/main.css" %}" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
+{% block title %}
+    Home
+{% endblock %}
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+{% block body %}
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="https://github.com/hsu022210">Alec Hsu</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+    <!-- Page Wrapper -->
+        <div id="page-wrapper">
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="{% url 'home' %}">Home</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="{% url 'sell' %}">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+            {% include 'theme/components/header.html' %}
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<!-- <div class="logo"><span class="icon fa-diamond"></span></div> -->
-                            <img src="https://graph.facebook.com/587825329/picture?type=normal" class="img-circle">
-							<h2>I am Alec Hsu</h2>
-							<p>self taught web developer</p>
-						</div>
-					</section>
+            <!-- Banner -->
+                <section id="banner">
+                    <div class="inner">
+                        <!-- <div class="logo"><span class="icon fa-diamond"></span></div> -->
+                        <img src="https://graph.facebook.com/587825329/picture?type=normal" class="img-circle">
+                        <h2>Alec Hsu</h2>
+                        <p>self taught web developer</p>
+                    </div>
+                </section>
 
-				<!-- Wrapper -->
-					<section id="wrapper">
+            <!-- Wrapper -->
+                <section id="wrapper">
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-                                    <div class="image">
-                                        <img src="{% static "theme/images/pic01.jpg" %}" alt="" />
-                                    </div>
-									<div class="content">
-										<h2 class="major">Education</h2>
-                                        <p>Bachelor of Mechanical Engineering<br/>National Taipei University of Technology - Graduating in 2016</p>
-                                        <hr />
-                                        <p>Master of Computer Science<br/>University of San Francisco - Graduating in 2018</p>
-										<a href="#one" class="special"></a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-                                    <div class="image">
-                                        <img src="{% static "theme/images/pic02.jpg" %}" alt="" />
-                                    </div>
-									<div class="content">
-										<h2 class="major">Skills</h2>
-                                        <div class="col-md-6">
-                        					<div class="progress">
-                        						<div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" style="width: 70%;">
-                        							Python
-                        						</div>
-                        					</div>
-
-                        					<div class="progress">
-                        						<div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" style="width: 70%;">
-                        							Django
-                        						</div>
-                        					</div>
-
-                        					<div class="progress">
-                        						<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 70%;">
-                        							Bootstrap
-                        						</div>
-                        					</div>
-
-                        					<div class="progress">
-                        						<div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 60%;">
-                        							jQuery
-                        						</div>
-                        					</div>
-                        				</div>
-
-                        				<div class="col-md-6">
-                        					<div class="progress">
-                        						<div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width: 70%;">
-                        							HTML
-                        						</div>
-                        					</div>
-
-                        					<div class="progress">
-                        						<div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width: 70%;">
-                        							CSS
-                        						</div>
-                        					</div>
-
-                        					<div class="progress">
-                        						<div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 50%;">
-                        							AngularJS
-                        						</div>
-                        					</div>
-
-                        					<div class="progress">
-                        						<div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 30%;">
-                        							Node.js
-                        						</div>
-                        					</div>
-                        				</div>
-										<a href="#two" class="special"></a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-                                    <div class="image">
-                                        <img src="{% static "theme/images/pic03.jpg" %}" alt="" />
-                                    </div>
-									<div class="content">
-										<h2 class="major">Experience</h2>
-                                        <div class="text-left">
-                                            <p>
-                                                2013
-                                                <span class="pull-right">
-                                                    AIESEC - IGIP Team Member
-                                                </span>
-                                                <br />
-                                                <br />
-
-                                                2014
-                                                <span class="pull-right">
-                                                    AIESEC - Market Expansion Team Manager
-                                                </span>
-                                                <br />
-                                                <span class="pull-right">
-                                                    JihLin Tech - Mechanical Engineering Intern
-                                                </span>
-                                                <br />
-                                                <br />
-
-                                                2015
-                                                <span class="pull-right">
-                                                    Hackathon Taiwan - Front End Developer
-                                                </span>
-                                                <br />
-                                                <span class="pull-right">
-                                                    OIA of NTUT - Exchange Student Buddy
-                                                </span>
-                                                <br />
-                                                <br />
-
-                                                2016
-                                                <span class="pull-right">
-                                                    Gliacloud Tech - Web Developer Intern
-                                                </span>
-                                            </p>
-                                        </div>
-										<!-- <a href="#" class="special">Learn more</a> -->
-									</div>
-								</div>
-							</section>
-
-						<!-- Four -->
-							<section id="four" class="wrapper alt style1">
-								<div class="inner">
-									<h2 class="major">Sale</h2>
-									<p>Things I would like to sell.</p>
-									<section class="features">
-                                        {% for item in items %}
-                                        <article>
-											<a href="#" class="image"><img src="{{ MEDIA_URL }}{{ item.image }}" alt="" /></a>
-											<h3 class="major">{{ item.title }}</h3>
-											<p>{{ item.description }}</p>
-											<p>${{ item.price }}</p>
-										</article>
-                                        {% endfor %}
-										<!-- <article>
-											<a href="#" class="image"><img src="{% static "theme/images/pic04.jpg" %}" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article> -->
-									</section>
-									<ul class="actions">
-										<li><a href="{% url 'sell' %}" class="button">More</a></li>
-									</ul>
-								</div>
-							</section>
-
-					</section>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<!-- <h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-
-							<form method="post" action="#">
-								<div class="field">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" />
-								</div>
-								<div class="field">
-									<label for="email">Email</label>
-									<input type="email" name="email" id="email" />
-								</div>
-								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="4"></textarea>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Submit" /></li>
-								</ul>
-							</form>
-
-							<ul class="contact">
-								<li class="fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-								<li class="fa-phone">(000) 000-0000</li>
-								<li class="fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="fa-facebook"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							</ul> -->
-                            <div class="row">
-                                <div class="3u">
-                                    &nbsp
+                    <!-- One -->
+                        <section id="one" class="wrapper spotlight style1">
+                            <div class="inner">
+                                <div class="image">
+                                    <img src="{% static "theme/images/pic01.jpg" %}" alt="" />
                                 </div>
-                                <div class="6u 12u$(medium)">
-                                    <ul class="actions vertical">
-                                        <li><a href="{% url 'contact' %}" class="button fit">Contact Me</a></li>
-                                    </ul>
+                                <div class="content">
+                                    <h2 class="major">Education</h2>
+                                    <p>Bachelor of Mechanical Engineering<br/>National Taipei University of Technology - Graduating in 2016</p>
+                                    <hr />
+                                    <p>Master of Computer Science<br/>University of San Francisco - Graduating in 2018</p>
+                                    <a href="#one" class="special"></a>
                                 </div>
                             </div>
+                        </section>
 
-							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+                    <!-- Two -->
+                        <section id="two" class="wrapper alt spotlight style2">
+                            <div class="inner">
+                                <div class="image">
+                                    <img src="{% static "theme/images/pic02.jpg" %}" alt="" />
+                                </div>
+                                <div class="content">
+                                    <h2 class="major">Skills</h2>
+                                    <div class="col-md-6">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" style="width: 70%;">
+                                                Python
+                                            </div>
+                                        </div>
 
-			</div>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" style="width: 70%;">
+                                                Django
+                                            </div>
+                                        </div>
 
-		<!-- Scripts -->
-			<!-- <script src="assets/js/skel.min.js"></script> -->
-            <script src="{% static "theme/js/skel.min.js" %}"></script>
-			<!-- <script src="assets/js/jquery.min.js"></script> -->
-            <script src="{% static "theme/js/jquery.min.js" %}"></script>
-			<!-- <script src="assets/js/jquery.scrollex.min.js"></script> -->
-            <script src="{% static "theme/js/jquery.scrollex.min.js" %}"></script>
-			<!-- <script src="assets/js/util.js"></script> -->
-            <script src="{% static "theme/js/util.js" %}"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<!-- <script src="assets/js/main.js"></script> -->
-            <script src="{% static "theme/js/main.js" %}"></script>
-            <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 70%;">
+                                                Bootstrap
+                                            </div>
+                                        </div>
 
-	</body>
-</html>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 60%;">
+                                                jQuery
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width: 70%;">
+                                                HTML
+                                            </div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width: 70%;">
+                                                CSS
+                                            </div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 50%;">
+                                                AngularJS
+                                            </div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 30%;">
+                                                Node.js
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#two" class="special"></a>
+                                </div>
+                            </div>
+                        </section>
+
+                    <!-- Three -->
+                        <section id="three" class="wrapper spotlight style3">
+                            <div class="inner">
+                                <div class="image">
+                                    <img src="{% static "theme/images/pic03.jpg" %}" alt="" />
+                                </div>
+                                <div class="content">
+                                    <h2 class="major">Experience</h2>
+                                    <div class="text-left">
+                                        <p>
+                                            2013
+                                            <span class="pull-right">
+                                                AIESEC - IGIP Team Member
+                                            </span>
+                                            <br />
+                                            <br />
+
+                                            2014
+                                            <span class="pull-right">
+                                                AIESEC - Market Expansion Team Manager
+                                            </span>
+                                            <br />
+                                            <span class="pull-right">
+                                                JihLin Tech - Mechanical Engineering Intern
+                                            </span>
+                                            <br />
+                                            <br />
+
+                                            2015
+                                            <span class="pull-right">
+                                                Hackathon Taiwan - Front End Developer
+                                            </span>
+                                            <br />
+                                            <span class="pull-right">
+                                                OIA of NTUT - Exchange Student Buddy
+                                            </span>
+                                            <br />
+                                            <br />
+
+                                            2016
+                                            <span class="pull-right">
+                                                Gliacloud Tech - Web Developer Intern
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <!-- <a href="#" class="special">Learn more</a> -->
+                                </div>
+                            </div>
+                        </section>
+
+                    <!-- Four -->
+                        <section id="four" class="wrapper alt style1">
+                            <div class="inner">
+                                <h2 class="major">Sale</h2>
+                                <p>Things I would like to sell.</p>
+                                <section class="features">
+                                    {% for item in items %}
+                                    <article>
+                                        <a href="#" class="image"><img src="{{ MEDIA_URL }}{{ item.image }}" alt="" /></a>
+                                        <h3 class="major">{{ item.title }}</h3>
+                                        <p>{{ item.description }}</p>
+                                        <p>${{ item.price }}</p>
+                                    </article>
+                                    {% endfor %}
+                                    <!-- <article>
+                                        <a href="#" class="image"><img src="{% static "theme/images/pic04.jpg" %}" alt="" /></a>
+                                        <h3 class="major">Sed feugiat lorem</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+                                        <a href="#" class="special">Learn more</a>
+                                    </article> -->
+                                </section>
+                                <ul class="actions">
+                                    <li><a href="{% url 'sale' %}" class="button">More</a></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                </section>
+
+            {% include 'theme/components/footer.html' %}
+
+        </div>
+
+{% endblock %}

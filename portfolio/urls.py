@@ -24,7 +24,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', theme.views.index, name='home'),
-    url(r'^sell/', sell.views.index, name='sell'),
+    url(r'^sale/', sell.views.index, name='sale'),
     url(r'^contact/', contact.views.index, name='contact'),
 ]
 
