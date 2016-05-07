@@ -1,2 +1,2 @@
 # portfolio
-creating a portflio website with Django and Bootstrap
+creating a portflio website with Django
