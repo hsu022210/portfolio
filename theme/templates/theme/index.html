@@ -19,7 +19,7 @@
                         <!-- <div class="logo"><span class="icon fa-diamond"></span></div> -->
                         <img src="https://graph.facebook.com/587825329/picture?type=normal" class="img-circle">
                         <h2>Alec Hsu</h2>
-                        <p>self taught web developer</p>
+                        <p>web developer</p>
                     </div>
                 </section>
 
@@ -37,7 +37,8 @@
                                     <p>Bachelor of Mechanical Engineering<br/>National Taipei University of Technology - Graduating in 2016</p>
                                     <hr />
                                     <p>Master of Computer Science<br/>University of San Francisco - Graduating in 2018</p>
-                                    <a href="#one" class="special"></a>
+                                    <!-- <a href="#one" class="special"></a> -->
+                                    <!-- <div class="special"></div> -->
                                 </div>
                             </div>
                         </section>
@@ -52,13 +53,13 @@
                                     <h2 class="major">Skills</h2>
                                     <div class="col-md-6">
                                         <div class="progress">
-                                            <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" style="width: 70%;">
+                                            <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" style="width: 75%;">
                                                 Python
                                             </div>
                                         </div>
 
                                         <div class="progress">
-                                            <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" style="width: 70%;">
+                                            <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar" style="width: 75%;">
                                                 Django
                                             </div>
                                         </div>
@@ -70,7 +71,7 @@
                                         </div>
 
                                         <div class="progress">
-                                            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 60%;">
+                                            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 65%;">
                                                 jQuery
                                             </div>
                                         </div>
@@ -78,13 +79,13 @@
 
                                     <div class="col-md-6">
                                         <div class="progress">
-                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width: 70%;">
+                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width: 75%;">
                                                 HTML
                                             </div>
                                         </div>
 
                                         <div class="progress">
-                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width: 70%;">
+                                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" style="width: 75%;">
                                                 CSS
                                             </div>
                                         </div>
@@ -101,7 +102,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="#two" class="special"></a>
+                                    <!-- <a href="#two" class="special"></a> -->
+                                    <!-- <div class="special"></div> -->
                                 </div>
                             </div>
                         </section>
@@ -136,6 +138,10 @@
 
                                             2015
                                             <span class="pull-right">
+                                                TOEFL-iBT - 97
+                                            </span>
+                                            <br />
+                                            <span class="pull-right">
                                                 Hackathon Taiwan - Front End Developer
                                             </span>
                                             <br />
@@ -162,6 +168,7 @@
                                 <h2 class="major">Sale</h2>
                                 <p>Things I would like to sell.</p>
                                 <section class="features">
+
                                     {% for item in items %}
                                     <article>
                                         <a href="#" class="image"><img src="{{ MEDIA_URL }}{{ item.image }}" alt="" /></a>
@@ -170,13 +177,9 @@
                                         <p>${{ item.price }}</p>
                                     </article>
                                     {% endfor %}
-                                    <!-- <article>
-                                        <a href="#" class="image"><img src="{% static "theme/images/pic04.jpg" %}" alt="" /></a>
-                                        <h3 class="major">Sed feugiat lorem</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-                                        <a href="#" class="special">Learn more</a>
-                                    </article> -->
+
                                 </section>
+                                
                                 <ul class="actions">
                                     <li><a href="{% url 'sale' %}" class="button">More</a></li>
                                 </ul>

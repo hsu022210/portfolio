@@ -1,5 +1,7 @@
 from django import forms
 from .models import Contact
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 class ContactForm(forms.Form):
@@ -16,5 +18,11 @@ class ContactForm(forms.Form):
         )
 
     def send_email(self):
-        # send email using the self.cleaned_data dictionary
-        pass
+        data = self.cleaned_data
+        name = data['name']
+        emailFrom = data['email']
+        message = data['message']
+        subject = '{} sent a message from my website'.format(name)
+        content = 'name: {}\n\nmessage: {}\n\nemail: {}'.format(name, message, emailFrom)
+        emailTo = [settings.EMAIL_HOST_USER]
+        send_mail(subject, content, emailFrom, emailTo, fail_silently=False)
