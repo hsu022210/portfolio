@@ -17,6 +17,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MEDIA_ROOT = BASE_DIR + "/media/"
 STATIC_ROOT = BASE_DIR + "/assets/"
 
+from . import email_info
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = email_info.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = email_info.EMAIL_HOST_PASSWORD
+EMAIL_PORT = '587'
+EMAIL_USE_TLS = True
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
