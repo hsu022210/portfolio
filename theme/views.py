@@ -5,6 +5,6 @@ from sell.models import Item
 
 
 def index(request):
-    items = Item.objects.order_by('-posted')[0:3]
+    items = Item.objects.order_by('-posted')[0:6]
     context = {'items': items, }
     return render(request, 'theme/index.html', context)
