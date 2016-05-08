@@ -10,5 +10,12 @@ class Item(models.Model):
     description = models.TextField()
     posted = models.DateTimeField('date posted', auto_now=True)
 
+    class Meta:
+        ordering = ['-posted']
+
+    def image_tag(self):
+        return '<img src="{}" height="100" />'.format(self.image.url)
+    image_tag.allow_tags = True
+
     def __str__(self):
         return self.title
