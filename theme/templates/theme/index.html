@@ -17,7 +17,8 @@
                 <section id="banner">
                     <div class="inner">
                         <!-- <div class="logo"><span class="icon fa-diamond"></span></div> -->
-                        <img src="https://graph.facebook.com/587825329/picture?type=normal" class="img-circle">
+                        <!-- <img src="https://graph.facebook.com/587825329/picture?type=normal" class="img-circle"> -->
+                        <img src="{% static "theme/images/Alec.png" %}" height='100px' class="img-circle">
                         <h2>Alec Hsu</h2>
                         <p>web developer</p>
                     </div>
@@ -29,9 +30,9 @@
                     <!-- One -->
                         <section id="one" class="wrapper spotlight style1">
                             <div class="inner">
-                                <div class="image">
+                                <!-- <div class="image">
                                     <img src="{% static "theme/images/pic01.jpg" %}" alt="" />
-                                </div>
+                                </div> -->
                                 <div class="content">
                                     <h2 class="major">Education</h2>
                                     <p>Bachelor of Mechanical Engineering<br/>National Taipei University of Technology - Graduating in 2016</p>
@@ -46,9 +47,9 @@
                     <!-- Two -->
                         <section id="two" class="wrapper alt spotlight style2">
                             <div class="inner">
-                                <div class="image">
+                                <!-- <div class="image">
                                     <img src="{% static "theme/images/pic02.jpg" %}" alt="" />
-                                </div>
+                                </div> -->
                                 <div class="content">
                                     <h2 class="major">Skills</h2>
                                     <div class="col-md-6">
@@ -111,9 +112,9 @@
                     <!-- Three -->
                         <section id="three" class="wrapper spotlight style3">
                             <div class="inner">
-                                <div class="image">
+                                <!-- <div class="image">
                                     <img src="{% static "theme/images/pic03.jpg" %}" alt="" />
-                                </div>
+                                </div> -->
                                 <div class="content">
                                     <h2 class="major">Experience</h2>
                                     <div class="text-left">
@@ -167,22 +168,49 @@
                             <div class="inner">
                                 <h2 class="major">Sale</h2>
                                 <p>Things I would like to sell.</p>
-                                <section class="features">
+                                <!-- <section class="features">
 
                                     {% for item in items %}
                                     <article>
-                                        <a href="#" class="image"><img src="{{ MEDIA_URL }}{{ item.image }}" alt="" /></a>
+                                        <span class="image fit"><img src="{{ MEDIA_URL }}{{ item.image }}" alt="" /></span>
                                         <h3 class="major">{{ item.title }}</h3>
                                         <p>{{ item.description }}</p>
                                         <p>${{ item.price }}</p>
                                     </article>
                                     {% endfor %}
 
-                                </section>
-                                
-                                <ul class="actions">
-                                    <li><a href="{% url 'sale' %}" class="button">More</a></li>
-                                </ul>
+                                </section> -->
+
+                                <div class="row uniform">
+                                    {% for item in items %}
+                                        {% if forloop.counter|divisibleby:'3' %}
+                                        <div class="4u$ 12u$(medium)">
+                                            <span class="image fit"><img src="{{ MEDIA_URL }}{{ item.image }}" alt="" /></span>
+                                            <ul class="alt">
+                                                <li>{{ item.title }}</li>
+                                                <li>${{ item.price }}</li>
+                                                <li>{{ item.description }}</li>
+                                            </ul>
+                                        </div>
+                                        {% else %}
+                                        <div class="4u 12u$(medium)">
+                                            <span class="image fit"><img src="{{ MEDIA_URL }}{{ item.image }}" alt="" /></span>
+                                            <ul class="alt">
+                                                <li>{{ item.title }}</li>
+                                                <li>${{ item.price }}</li>
+                                                <li>{{ item.description }}</li>
+                                            </ul>
+                                        </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="row uniform">
+                                    <div class="3u 6u$(medium)">
+                                        <ul class="actions">
+                                            <li><a href="{% url 'sale' %}" class="button">More</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </section>
 
