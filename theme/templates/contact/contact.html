@@ -30,12 +30,17 @@
 
                                 <section id="footer">
                                     <div class="inner">
+                                        {% if messages %}
+                                           {% for message in messages %}
+                                             <div class="alert alert-info text-center {% if message.tags %} alert-{{ message.tags }}{% endif %}">{{ message|safe }}</div>
+                                           {% endfor %}
+                                         {% endif %}
                                         <h2 class="major">Get in touch</h2>
                                         <p>
 
                                         </p>
 
-                                        <form method="post" action="/contact/"> {% csrf_token %}
+                                        <form method="post" action=""> {% csrf_token %}
                                             {% for field in form %}
                                                 {% if field.label|lower == 'message' %}
                                                     <div class="field">
