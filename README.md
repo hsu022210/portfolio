@@ -1,2 +1,3 @@
 # portfolio
-creating a portflio website with Django
+a personal website built with Django
+![alt tag](http://gdurl.com/WHB0)
